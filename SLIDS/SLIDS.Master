@@ -1,0 +1,235 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SLIDS.master.cs" Inherits="Pentag.SLIDS.SLIDSMaster" %>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>SLIDS</title>
+    <link href="~/styles/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="~/styles/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="~/styles/SLIDS.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server" AsyncPostBackTimeout="360000" />
+        <div id="topContent">
+            <div id="header">
+                <div id="headerContent">
+                    <table class="slidsNoBorder">
+                        <tr>
+                            <td>
+                                <asp:Image ID="imgLogo" runat="server" ImageUrl="~/resources/swisstransplant.png" /></td>
+                            <td>
+                                <asp:Label ID="lblTitle" runat="server" Text="SLIDS" CssClass="slidsTitleProd" /></td>
+                            <td>
+                                <asp:Label ID="lblTitleInfo" runat="server" Text="Swisstransplant logistics and <br /> invoice documentation system" CssClass="slidsTitleInfoProd" /></td>
+                            <td>
+                                <asp:Label ID="lblHeaderMessage" runat="server" Text="" CssClass="slidsTitleDev" /></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <asp:UpdatePanel ID="pnlMenu" runat="server">
+                <Triggers>
+                    <asp:AsyncPostBackTrigger ControlID="NavigationMenu" />
+                </Triggers>
+                <ContentTemplate>
+                    <div id="alertMessage" runat="server" class="alert alert-info alert-dismissable alert-scrollable" style="margin-bottom: 10px;margin-top: 10px;display:none;">
+                        <asp:Literal ID="litAlert" runat="server" />
+                    </div>
+                    <div id="subHeader">
+                        <asp:HiddenField ID="hidDonorID" Value="0" runat="server" />
+                        <asp:HyperLink runat="server" ID="lnkLogout" Text="Log out" NavigateUrl="~/WebAccess/Logout.aspx" CssClass="menuBarHyperlink" />
+                        <asp:HyperLink runat="server" ID="lnkResetUserPassword" Text="Reset password" OnInit="lnkResetUserPassword_Init" CssClass="menuBarHyperlink" />
+
+                        <asp:Menu ID="NavigationMenu" runat="server"
+                            StaticDisplayLevels="1"
+                            MaximumDynamicDisplayLevels="2"
+                            DynamicHorizontalOffset="0"
+                            DynamicVerticalOffset="5"
+                            Orientation="Horizontal"
+                            ForeColor="#0b418d"
+                            Font-Size="20Px"
+                            StaticMenuStyle-VerticalPadding="6"
+                            StaticMenuStyle-HorizontalPadding="0"
+                            StaticMenuItemStyle-VerticalPadding="0"
+                            StaticMenuItemStyle-HorizontalPadding="10"
+                            StaticHoverStyle-ForeColor="#0b418d"
+                            DynamicMenuStyle-VerticalPadding="0.15em"
+                            DynamicMenuStyle-HorizontalPadding="0"
+                            DynamicMenuStyle-ForeColor="#0b418d"
+                            DynamicMenuItemStyle-VerticalPadding="2"
+                            DynamicMenuItemStyle-HorizontalPadding="10"
+                            DynamicMenuItemStyle-ItemSpacing="15"
+                            DynamicMenuItemStyle-Font-Bold="false"
+                            DynamicMenuItemStyle-Font-Size="Small"
+                            DynamicMenuItemStyle-BackColor="#DFDFDF"
+                            DynamicMenuItemStyle-ForeColor="#0b418d"
+                            DynamicSelectedStyle-ForeColor="#0b418d"
+                            StaticEnableDefaultPopOutImage="false">
+                            <Items>
+                                <asp:MenuItem Text="Donor" Value="Donor" NavigateUrl="~/Search.aspx" />
+
+                                <asp:MenuItem Text="Organs" Value="Organs" NavigateUrl="~/Organ.aspx" />
+
+                                <asp:MenuItem Text="Transport" Value="Transport" NavigateUrl="~/Transport.aspx" />
+
+                                <asp:MenuItem Text="Cost" Value="Cost" Selectable="false">
+                                    <asp:MenuItem Text="General costs" Value="General costs" NavigateUrl="~/Cost.aspx" />
+                                    <asp:MenuItem Text="Transport costs" Value="Transport costs" NavigateUrl="~/TransportCost.aspx" />
+                                </asp:MenuItem>
+
+                                <asp:MenuItem Text="Delay" Value="Delay" NavigateUrl="~/Delay.aspx" />
+
+                                <asp:MenuItem Text="Statistics" Value="Statistics" Selectable="False">
+                                    <asp:MenuItem Text="Excel Export" Value="Excel Export" NavigateUrl="~/Statistics.aspx" />
+                                    <asp:MenuItem Text="Incitent Excel Export" Value="Incitent Excel Export" NavigateUrl="~/IncitentStatistics.aspx" />
+                                    <asp:MenuItem Text="Statistical Report" Value="Statistical Report" NavigateUrl="~/Reports/StatisticalReport.aspx" />
+                                    <asp:MenuItem Text="Financial Report" Value="Financial Report" NavigateUrl="~/Reports/FinancialReport.aspx" />
+                                </asp:MenuItem>
+
+                                <asp:MenuItem Text="Incidents" Value="Incidents" Selectable="False">
+                                    <asp:MenuItem Text="Overview" Value="Overview" NavigateUrl="~/IncidentOverview.aspx" />
+                                    <asp:MenuItem Text="Add New..." Value="Add New..." NavigateUrl="~/IncidentCreate.aspx" />
+                                    <asp:MenuItem Text="Incident Lexicon" Value="Incident Lexicon" NavigateUrl="~/IncidentLexicon.aspx" />
+                                </asp:MenuItem>
+
+                                <asp:MenuItem Text="Administration" Value="Administration" Selectable="false">
+                                    <asp:MenuItem Text="Manage users" Value="Manage users" NavigateUrl="~/Administration/ManageUsers.aspx" />
+                                    <asp:MenuItem Text="Manage coordinators" Value="Manage coordinators" NavigateUrl="~/Administration/ManageCoordinators.aspx" />
+                                    <asp:MenuItem Text="Manage hospitals" Value="Manage hospitals" NavigateUrl="~/Administration/ManageHospitals.aspx" />
+                                    <asp:MenuItem Text="Manage organs" Value="Manage organs" NavigateUrl="~/Administration/ManageOrgans.aspx" />
+                                    <asp:MenuItem Text="Manage transport items" Value="Manage transport items" NavigateUrl="~/Administration/ManageTransportItems.aspx" />
+                                    <asp:MenuItem Text="Manage vehicles" Value="Manage vehicles" NavigateUrl="~/Administration/ManageVehicles.aspx" />
+                                    <asp:MenuItem Text="Manage creditors" Value="Manage creditors" NavigateUrl="~/Administration/ManageCreditors.aspx" />
+                                    <asp:MenuItem Text="Manage lifeports" Value="Manage vehicles" NavigateUrl="~/Administration/ManageLifeports.aspx" />
+                                </asp:MenuItem>
+                            </Items>
+                        </asp:Menu>
+                    </div>
+                </ContentTemplate>
+            </asp:UpdatePanel>
+
+            <div id="overViewHeader">
+                <asp:UpdatePanel ID="SelectedDonor" runat="server">
+                    <ContentTemplate>
+                        <asp:Panel ID="pnlSelectedDonor" GroupingText="Donor" CssClass="slidsPanel" runat="server">
+                            <div id="divNegTransport" runat="server" Visible="False" class="alert alert-warning" role="alert">
+                                Has negative transportation time!
+                            </div>
+                            <asp:GridView ID="gvSelectedDonor" runat="server" ItemType="Pentag.SLIDS.DAL.Donor" SelectMethod="gvSelectedDonor_GetData"
+                                DataKeyNames="ID" AutoGenerateColumns="False" CssClass="slidsGridOverview">
+                                <Columns>
+                                    <asp:TemplateField HeaderText="ST/FO Number" SortExpression="Name">
+                                        <ItemTemplate><%# Item.DonorNumber %></ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="Referral Hospital">
+                                        <ItemTemplate><%# Item.Hospital2 == null ? String.Empty : Item.Hospital2.Display %></ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="Procurement Hospital">
+                                        <ItemTemplate><%# Item.Hospital1 == null ? String.Empty : Item.Hospital1.Display %></ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="Registration Date">
+                                        <ItemTemplate><%# String.Format("{0:dd.MM.yyyy}", Item.RegisterDate) %></ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="Procurement Date">
+                                        <ItemTemplate><%# String.Format("{0:dd.MM.yyyy}", Item.ProcurementDate) %></ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="Incision">
+                                        <ItemTemplate><%# Item.IncisionMade ? "<img src=\"images/done.png\">" : "" %></ItemTemplate>
+                                    </asp:TemplateField>
+                                </Columns>
+                            </asp:GridView>
+                            <asp:Panel ID="pnlSelectedDonorIncident" GroupingText="Incident" CssClass="slidsPanel" runat="server">
+                            <asp:GridView ID="gvSelectedDonorIncident" runat="server" ItemType="Pentag.SLIDS.DAL.Incident" 
+                                SelectMethod="gvSelectedDonorIncident_GetData" OnRowDataBound="gvSelectedDonorIncident_RowDataBound"
+                                DataKeyNames="ID" AutoGenerateColumns="False" 
+                                CssClass="slidsGrid" SelectedRowStyle-CssClass="slidsGridSelected" PagerStyle-CssClass="slidsGridPager">
+                                <Columns>
+                                    <asp:TemplateField HeaderText="Incident No" SortExpression="Name">
+                                        <ItemTemplate><%# Item.IncidentNo %></ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="Date">
+                                        <ItemTemplate><%# Item.CreationDate.ToShortDateString() %></ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="Description">
+                                        <ItemTemplate><%# Item.IncidentDescription %></ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="Process">
+                                        <ItemTemplate><%# Item.IncidentProcess == null ? String.Empty : Item.IncidentProcess.Description %></ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="Category">
+                                        <ItemTemplate><%# Item.IncidentCategory == null ? String.Empty : Item.IncidentCategory.Description %></ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="Status">
+                                        <ItemTemplate><%# Item.IncidentState == null ? "" : Item.IncidentState.Description %></ItemTemplate>
+                                    </asp:TemplateField>
+                                </Columns>
+                            </asp:GridView>
+                            </asp:Panel>
+                        </asp:Panel>
+                    </ContentTemplate>
+                </asp:UpdatePanel>
+
+                <asp:UpdateProgress ID="UpdateProgress1" runat="server" DisplayAfter="0">
+                    <ProgressTemplate>
+                        <asp:Image ID="Image3" runat="server" CssClass="centered" ImageUrl="~/resources/pleasewait.gif" />
+                    </ProgressTemplate>
+                </asp:UpdateProgress>
+
+            </div>
+        </div>
+
+        <div id="content">
+            <asp:ContentPlaceHolder ID="MainContentPlaceHolder" runat="server" />
+            <asp:ContentPlaceHolder ID="StatsContentPlaceHolder" runat="server" />
+
+            <asp:UpdatePanel ID="StatusBar" UpdateMode="Conditional" runat="server">
+                <Triggers>
+                    <asp:AsyncPostBackTrigger ControlID="MainContentPlaceHolder" />
+                </Triggers>
+                <ContentTemplate>
+                    <table>
+                        <tr>
+                            <td>
+                                <asp:Image ID="imgStatus" runat="server" ViewStateMode="Disabled" />
+                                <asp:Label ID="lblStatus" ClientIDMode="Static" runat="server" ViewStateMode="Disabled" />
+                            </td>
+                        </tr>
+                    </table>
+                </ContentTemplate>
+            </asp:UpdatePanel>
+        </div>
+
+        <div id="milkyScreenDisabler"></div>
+
+        <div id="footer">
+            <table>
+                <tr>
+                    <td>PENTAG Informatik AG</td>
+                    <td style="text-align: right">
+                        <asp:Label runat="server" ID="lblVersion" Text="SLIDS"></asp:Label>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>
+<script type="text/javascript">
+    Sys.WebForms.PageRequestManager.getInstance().add_beginRequest(startRequest);
+    Sys.WebForms.PageRequestManager.getInstance().add_endRequest(endRequest);
+
+    /* Hide milkyScreenDisabler on entry */
+    document.getElementById('milkyScreenDisabler').style.display = "none";
+
+    function startRequest() {
+        /* Show milkyScreenDisabler on postback */
+        document.getElementById('milkyScreenDisabler').style.display = "";
+    }
+    function endRequest() {
+        /* Hide milkyScreenDisabler when done loading */
+        document.getElementById('milkyScreenDisabler').style.display = "none";
+    }
+</script>

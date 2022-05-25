@@ -1,0 +1,719 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900,400italic);
+
+html {
+    overflow-y: scroll;
+    overflow-x: auto;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Source Sans Pro", Arial;
+    font-size: 12px;
+    color: #000000;  
+    background-color: #f9f9f9;
+    width: 100%;
+    height: auto;
+    min-height: 100% !important;
+    position: relative;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+h5 {
+    padding: 0;
+    margin: 0;
+    border-width: 0;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+table {
+    padding: 10px;
+    text-align: left;
+}
+
+.fullWidth {
+    width: 100%;
+}
+
+.statsTable {
+    padding: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    border-width: 0;
+    border-top: 0;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+}
+
+.slidsNoBorder {
+    margin: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+}
+
+.slidsTitleDev {
+    font-size: 5em;
+    font-weight: bold;
+    background-color: transparent;
+    margin-left: 2em;
+    color: #d6273b;
+}
+
+.slidsTitleInfoDev {
+    font-size: 2em;
+    background-color: transparent;
+    color: #d6273b;
+}
+
+.slidsTitleProd {
+    font-size: 5em;
+    font-weight: bold;
+    background-color: transparent;
+    margin-left: 2em;
+    color: #2A548A;
+}
+
+.slidsTitleInfoProd {
+    font-size: 2em;
+    background-color: transparent;
+    color: #2A548A;
+}
+
+.centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+}
+
+.slidsPanel {
+    padding: 5px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: 2px;
+    margin-right: 2px;
+    height: 100%;
+    width: 100%;
+}
+
+.smallPanel {
+    width: 50%;
+    padding: 5px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.tbColumn {
+    width: 16em;
+}
+
+.labelColumn {
+    width: 15em;
+}
+
+/* Style for input text boxes*/
+input[type="text"] {
+    margin-right: 0.8em;
+    color:#000000;
+}
+
+.smallInputTextBox {
+    width: 8em;
+}
+
+.tinyInputTextBox {
+    width: 4em;
+}
+
+.defaultInputTextBox {
+    width: 15em;
+}
+
+.largeInputTextBox {
+    width: 22em;
+}
+
+.defaultInputDecimalTextBox {
+    width: 15em;
+    text-align: right;
+}
+
+textarea {
+    margin-right: 0.8em;
+    font-size: 13Px;
+    font-family: Verdana, Arial, Helvetica;
+}
+
+/* Style for labels (labels render as span) */
+span {
+    margin-right: 0.5em;
+}
+
+.ajax__tab_outer span, .ajax__tab_header span {
+    margin-right: 0em;
+}
+
+.smallLabel {
+    width: 7em;
+}
+
+.defaultLabel {
+    width: 15em;
+    margin-right: 0.6em;
+}
+
+.defaultLabelAlignRight {
+    width: 15em;
+    margin-right: 0.6em;
+    text-align: right;
+}
+
+.lblError {
+    font-weight: bold;
+    color: red;
+}
+
+.lblWarning {
+    color: orange;
+}
+
+.lblInfo {
+    color: #006FBB;
+}
+
+.lblSuccess {
+    color: green;
+}
+
+.defaultDropDownList {
+    width: 15.45em;
+    margin-right: 0.8em;
+    color:#000000;
+}
+
+.largeDropDownList {
+    width: 22.45em;
+    margin-right: 0.8em;
+}
+
+.smallDropDownList {
+    width: 7.45em;
+    margin-right: 0.8em;
+}
+
+.defaultButton {
+    width: 7em;
+    margin-right: 0.5em;
+}
+
+.addNewButton {
+    width: 7em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+.largeAddNewButton {
+    width: 15em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+.largeButton {
+    width: 15em;
+    margin-right: 0.5em;
+}
+
+.alignRight {
+    text-align: right;
+}
+
+.alignLeft {
+    text-align: left;
+}
+
+.verticalAlignTop {
+    vertical-align: top;
+}
+
+.tinyWatermarked {
+    color: #C0C0C0;
+    font-style: italic;
+    width: 4em;
+}
+
+.smallWatermarked {
+    color: #C0C0C0;
+    font-style: italic;
+    width: 8em;
+}
+
+.defaultWatermarked {
+    color: #C0C0C0;
+    font-style: italic;
+    width: 15em;
+}
+
+#topContent {
+    width: 1280px;
+    margin: auto;
+}
+
+#header {
+    height: 120Px;
+    padding-top: 5px;
+}
+
+#headerContent {
+    width: 1280px;
+    margin: auto;
+}
+
+#subHeader {
+    height: 3.2em;
+    width: 1280px !important;
+    margin: auto;
+    color: #2A548A;
+    text-transform: uppercase;
+}
+
+#subHeader .level2 {
+    text-transform:none;
+}
+
+#overViewHeader {
+    width: 1280px;
+    margin: auto;
+}
+
+#content {
+    width: 1280px;
+    margin: auto;
+}
+
+#footer {
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: #cccccc;
+    font-size: 0.9em;
+    color: #cccccc;
+    margin: 25px auto auto auto;
+    width: 1280px;
+}
+
+    #footer table {
+        width: 100%;
+    }
+
+#milkyScreenDisabler {
+    /* make it cover the whole screen */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2A548A;
+    opacity: .10;
+    filter: alpha(opacity=10);
+}
+
+
+.menuBarHyperlink {
+    text-align: right;
+    color: #2A548A;
+    background-color: transparent;
+    margin-right: 1em;
+    font-size: small;
+    float: right;
+    text-decoration: none;
+}
+
+.slidsGrid {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    border-color: white;
+    border: thin;
+    border-collapse: collapse;
+}
+
+    .slidsGrid tr {
+        /*background-color: #EFF3FB;*/
+    }
+
+        .slidsGrid tr:hover {
+            background-color: #2A548A;
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+
+    .slidsGrid th {
+        background-color: #DFDFDF;
+        color: #2A548A;
+        font-weight: 600;
+        padding: 4px;
+        cursor: default;
+        /*text-transform:uppercase;*/
+        vertical-align: top;
+        border: dotted 1px #ffffff;
+    }
+
+        .slidsGrid th a {
+            color: #2A548A;
+            text-decoration: none;
+        }
+
+            .slidsGrid th a:hover {
+                color: #2A548A;
+                text-decoration: none;
+            }
+
+    .slidsGrid td {
+        padding-top: 2px;
+        padding-bottom: 2px;
+        padding-left: 7px;
+        padding-right: 7px;
+        border-color: white;
+        cursor: pointer;
+    }
+
+    .slidsGrid .slidsGridSelected td {
+        background-color: #d6273b;
+        font-weight: 700;
+        color: #FFFFFF;
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+.slidsGridPager {
+    text-align: center;
+    background-color: #DFDFDF;
+}
+
+    .slidsGridPager table {
+        margin: auto;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .slidsGridPager tr {
+        text-align: center;
+        background-color: #DFDFDF;
+        color: #d6273b;
+    }
+
+    .slidsGridPager td {
+        background-color: #DFDFDF;
+        cursor: default;
+    }
+
+        .slidsGridPager td a {
+            color: #2A548A;
+            text-decoration: none;
+        }
+
+            .slidsGridPager td a:hover {
+                color: #d6273b;
+                text-decoration: none;
+            }
+
+
+
+.slidsGridNotSelectable {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    border-color: white;
+    border: thin;
+    border-collapse: collapse;
+}
+
+    .slidsGridNotSelectable tr {
+    }
+
+    .slidsGridNotSelectable th {
+        font-weight: bold;
+        padding: 4px;
+        cursor: default;
+        border: dotted 1px #ffffff;
+        color: #2A548A;
+        background-color: #DFDFDF;
+        /*text-transform:uppercase;*/
+        vertical-align: top;
+    }
+
+        .slidsGridNotSelectable th a {
+            color: #2A548A;
+            text-decoration: none;
+        }
+
+    .slidsGridNotSelectable td {
+        padding-top: 2px;
+        padding-bottom: 2px;
+        padding-left: 7px;
+        padding-right: 7px;
+        border-color: white;
+        cursor: default;
+    }
+
+    .slidsGridNotSelectable .slidsGridNotSelectablePager {
+        text-align: center;
+        background-color: #006FBB;
+    }
+
+        .slidsGridNotSelectable .slidsGridNotSelectablePager table {
+            margin: auto;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        .slidsGridNotSelectable .slidsGridNotSelectablePager tr {
+            text-align: center;
+            background-color: #2461BF;
+            color: #EFF3FB;
+        }
+
+        .slidsGridNotSelectable .slidsGridNotSelectablePager td {
+            background-color: #2461BF;
+            cursor: default;
+        }
+
+            .slidsGridNotSelectable .slidsGridNotSelectablePager td a {
+                color: #C0C0C0;
+                text-decoration: none;
+            }
+
+                .slidsGridNotSelectable .slidsGridNotSelectablePager td a:hover {
+                    color: white;
+                    text-decoration: none;
+                }
+
+
+
+
+.slidsGridOverview {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    border-color: white;
+    border: thin;
+    border-collapse: collapse;
+}
+
+    .slidsGridOverview th {
+        background-color: #DFDFDF;
+        font-weight: bold;
+        padding: 4px;
+        /*text-transform:uppercase;*/
+        vertical-align: top;
+        border: dotted 1px #ffffff;
+        color: #2A548A;
+    }
+
+    .slidsGridOverview td {
+        padding-top: 2px;
+        padding-bottom: 2px;
+        padding-left: 7px;
+        padding-right: 7px;
+        border-color: white;
+    }
+
+
+.HideButton {
+    display: none;
+}
+
+.tableCustomPager {
+    width: 100%;
+    text-align: center;
+}
+
+    .tableCustomPager tr {
+        text-align: center;
+    }
+
+.margin10px {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+a:link img {
+    border: none;
+}
+
+a:visited img {
+    border: none;
+}
+
+a:active img {
+    border: none;
+}
+
+a:hover img {
+    border: none;
+}
+
+.alert {
+    padding: 15px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+.alert-info {
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}
+
+.alert-warning {
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+}
+
+.alert-dismissable {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 35px;
+}
+
+    .alert-dismissable .close {
+        position: relative;
+        top: -2px;
+        right: -21px;
+        color: inherit;
+    }
+
+button.close {
+    -webkit-appearance: none;
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+}
+
+.alert h4 {
+    color: inherit;
+}
+
+.alert-scrollable {
+    overflow: auto;
+    max-height: 200Px;
+}
+
+h4, .h4 {
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.close {
+    float: right;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    filter: alpha(opacity=20);
+    opacity: .2;
+}
+
+
+/* TAB */
+.slidsTab {
+    margin: 2px;
+}
+
+    .slidsTab .ajax__tab_body {
+        padding: 10px;
+    }
+
+    .slidsTab .ajax__tab_header {
+        font-weight: bold;
+        border-bottom: 2px groove threedface;
+        border-left: 1px solid #bbb;
+        text-decoration:none;
+        /*text-transform:uppercase;*/
+        vertical-align:top;
+    }
+
+        .slidsTab .ajax__tab_header .ajax__tab_hover .ajax__tab_outer,
+        .slidsTab .ajax__tab_header .ajax__tab_hover .ajax__tab_inner,
+        .slidsTab .ajax__tab_header .ajax__tab_hover .ajax__tab_tab {
+            background-color: #2A548A;
+            color: #FFF;
+        }
+    
+        .slidsTab .ajax__tab_header .ajax__tab_active .ajax__tab_outer,
+        .slidsTab .ajax__tab_header .ajax__tab_active .ajax__tab_inner,
+        .slidsTab .ajax__tab_header .ajax__tab_active .ajax__tab_tab{
+            background-color: #D6273B;
+            color: #FFF;
+        }
+
+        .slidsTab .ajax__tab_header .ajax__tab_active .ajax__tab_tab {
+            outline:none;
+        }
+
+        .slidsTab .ajax__tab_header .ajax__tab_tab {
+            background: #DFDFDF;
+            margin: 0px;
+            border: 0;
+            color: #333;
+        }
+
+        .slidsTab .ajax__tab_header .ajax__tab_inner {
+            padding-left: 3px;
+            background: #DFDFDF;
+            border-right: 1px solid #bbb;
+            border-top: 1px solid #bbb;
+            border-bottom: 0;
+        }
+
+    .slidsTab .ajax__tab_tab {
+        padding: 3px;
+        color: #333;
+        border-right: 1px solid #bbb;
+        border-top: 1px solid #bbb;
+    }
+
+    .slidsTab .ajax__tab_body {
+        border: 1px solid #bbb;
+        border-top: 0px;
+    }
+
+    select:disabled {
+        background: #dddddd;
+    }

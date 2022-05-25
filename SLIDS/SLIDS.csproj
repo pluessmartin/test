@@ -1,0 +1,846 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F4231186-84D7-44D4-BD73-5C61EE60C40D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pentag.SLIDS</RootNamespace>
+    <AssemblyName>SLIDS</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=4.1.60919.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AjaxControlToolkit.4.1.60919\lib\45\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus">
+      <HintPath>..\packages\EPPlus.3.1.2\lib\net35\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\packages\AjaxControlToolkit.4.1.60919\lib\45\SanitizerProviders\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.9.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.9\lib\itextsharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Runtime.Common.11.0.3452.0\lib\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Runtime.Common.11.0.3452.0\lib\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Runtime.Common.11.0.3452.0\lib\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Runtime.WinForms.11.0.3452.0\lib\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Optimization">
+      <HintPath>..\packages\Microsoft.Web.Optimization.0.1\lib\net40\Microsoft.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=3.2.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\_ref\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="NLogAddOn">
+      <HintPath>..\_ref\NLogAddOn.dll</HintPath>
+    </Reference>
+    <Reference Include="SanitizerProviders">
+      <HintPath>..\packages\AjaxControlToolkit.4.1.60919\lib\45\SanitizerProviders\SanitizerProviders.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Activities" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Activities" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Administration\ManageCoordinators.aspx" />
+    <Content Include="Administration\ManageCreditors.aspx" />
+    <Content Include="Administration\ManageHospitals.aspx" />
+    <Content Include="Administration\ManageOrgans.aspx" />
+    <Content Include="Administration\ManageTransportItems.aspx" />
+    <Content Include="Administration\ManageUsers.aspx" />
+    <Content Include="Administration\ManageLifeports.aspx" />
+    <Content Include="Administration\ManageVehicles.aspx" />
+    <Content Include="Administration\ResetUserPassword.aspx" />
+    <Content Include="Controls\ucAddresses.ascx" />
+    <Content Include="Controls\ucAlterControl.ascx" />
+    <Content Include="Controls\ucIncident.ascx" />
+    <Content Include="Controls\ucIncidentDocuments.ascx" />
+    <Content Include="Controls\ucIncidentDonor.ascx" />
+    <Content Include="Controls\ucOrganCostAllocation.ascx" />
+    <Content Include="Controls\ucStatisticDateSearchFilter.ascx" />
+    <Content Include="Cost.aspx" />
+    <Content Include="Delay.aspx" />
+    <Content Include="Error.aspx" />
+    <Content Include="images\done.png" />
+    <Content Include="images\entry_delete.png" />
+    <Content Include="images\info.png" />
+    <Content Include="IncidentLexicon.aspx" />
+    <Content Include="IncidentCreate.aspx" />
+    <Content Include="IncidentOverview.aspx" />
+    <Content Include="Interruption.aspx" />
+    <Content Include="MailSend.aspx" />
+    <Content Include="Organ.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Reports\FinancialReport.aspx" />
+    <Content Include="Reports\IncidentReportViewPDF.aspx" />
+    <Content Include="Reports\ReminderLetterViewPDF.aspx" />
+    <Content Include="Reports\StatisticalReport.aspx" />
+    <Content Include="Reports\FinancialReportViewPDF.aspx" />
+    <Content Include="resources\address.jpg" />
+    <Content Include="resources\address.png" />
+    <Content Include="resources\entry_delete.png" />
+    <Content Include="resources\file_download.png" />
+    <Content Include="resources\infoLabel_error.png" />
+    <Content Include="resources\infoLabel_info.png" />
+    <Content Include="resources\infoLabel_okay.png" />
+    <Content Include="resources\infoLabel_warnung.png" />
+    <Content Include="resources\pleasewait.gif" />
+    <Content Include="resources\swisstransplant.jpg" />
+    <Content Include="resources\swisstransplant.png" />
+    <Content Include="resources\swisstransplant_20210507.jpg" />
+    <Content Include="resources\swisstransplant_old.png" />
+    <Content Include="resources\swisstransplant2.jpg" />
+    <Content Include="resources\swt_pdf.png" />
+    <Content Include="scripts\jquery-1.4.1.min.js" />
+    <Content Include="IncitentStatistics.aspx" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Statistics.aspx" />
+    <Content Include="styles\bootstrap.css" />
+    <Content Include="styles\normalize.css" />
+    <Content Include="Transport.aspx" />
+    <Content Include="TransportCost.aspx" />
+    <Content Include="ViewDocument.aspx" />
+    <Content Include="ViewPDF.aspx" />
+    <Content Include="WarmUp.aspx" />
+    <Content Include="WebAccess\Authenticate.aspx" />
+    <Content Include="WebAccess\Login.aspx" />
+    <Content Include="WebAccess\Logout.aspx" />
+    <Content Include="Administration\ManageUserAndRoleAllocation.aspx" />
+    <Content Include="WebAccess\PasswordRecovery.aspx" />
+    <Content Include="WebAccess\PasswordResetWithToken.aspx" />
+    <Content Include="WebAccess\UnauthorisedAccess.aspx" />
+    <Content Include="resources\swisstransplant_old.jpg" />
+    <Content Include="Search.aspx" />
+    <Content Include="styles\SLIDS.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administration\ManageCoordinators.aspx.cs">
+      <DependentUpon>ManageCoordinators.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\ManageCoordinators.aspx.designer.cs">
+      <DependentUpon>ManageCoordinators.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\ManageCreditors.aspx.cs">
+      <DependentUpon>ManageCreditors.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\ManageCreditors.aspx.designer.cs">
+      <DependentUpon>ManageCreditors.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\ManageHospitals.aspx.cs">
+      <DependentUpon>ManageHospitals.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\ManageHospitals.aspx.designer.cs">
+      <DependentUpon>ManageHospitals.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\ManageOrgans.aspx.cs">
+      <DependentUpon>ManageOrgans.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\ManageOrgans.aspx.designer.cs">
+      <DependentUpon>ManageOrgans.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\ManageTransportItems.aspx.cs">
+      <DependentUpon>ManageTransportItems.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\ManageTransportItems.aspx.designer.cs">
+      <DependentUpon>ManageTransportItems.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\ManageUsers.aspx.cs">
+      <DependentUpon>ManageUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\ManageUsers.aspx.designer.cs">
+      <DependentUpon>ManageUsers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\ManageLifeports.aspx.cs">
+      <DependentUpon>ManageLifeports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\ManageLifeports.aspx.designer.cs">
+      <DependentUpon>ManageLifeports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\ManageVehicles.aspx.cs">
+      <DependentUpon>ManageVehicles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\ManageVehicles.aspx.designer.cs">
+      <DependentUpon>ManageVehicles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\ResetUserPassword.aspx.cs">
+      <DependentUpon>ResetUserPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\ResetUserPassword.aspx.designer.cs">
+      <DependentUpon>ResetUserPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Constants.cs" />
+    <Compile Include="Common\Document.cs" />
+    <Compile Include="Common\Enums.cs" />
+    <Compile Include="Common\StatisticalExport.cs" />
+    <Compile Include="Common\Crypto.cs" />
+    <Compile Include="Common\StringExtensions.cs" />
+    <Compile Include="Controls\ucAddresses.ascx.cs">
+      <DependentUpon>ucAddresses.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ucAddresses.ascx.designer.cs">
+      <DependentUpon>ucAddresses.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucAlterControl.ascx.cs">
+      <DependentUpon>ucAlterControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ucAlterControl.ascx.designer.cs">
+      <DependentUpon>ucAlterControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucIncident.ascx.cs">
+      <DependentUpon>ucIncident.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ucIncident.ascx.designer.cs">
+      <DependentUpon>ucIncident.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucIncidentDocuments.ascx.cs">
+      <DependentUpon>ucIncidentDocuments.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ucIncidentDocuments.ascx.designer.cs">
+      <DependentUpon>ucIncidentDocuments.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucIncidentDonor.ascx.cs">
+      <DependentUpon>ucIncidentDonor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ucIncidentDonor.ascx.designer.cs">
+      <DependentUpon>ucIncidentDonor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucOrganCostAllocation.ascx.cs">
+      <DependentUpon>ucOrganCostAllocation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ucOrganCostAllocation.ascx.designer.cs">
+      <DependentUpon>ucOrganCostAllocation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucStatisticDateSearchFilter.ascx.cs">
+      <DependentUpon>ucStatisticDateSearchFilter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ucStatisticDateSearchFilter.ascx.designer.cs">
+      <DependentUpon>ucStatisticDateSearchFilter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Cost.aspx.cs">
+      <DependentUpon>Cost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cost.aspx.designer.cs">
+      <DependentUpon>Cost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Address.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Ado.cs" />
+    <Compile Include="DAL\aspnet_Applications.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\aspnet_Membership.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\aspnet_Paths.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\aspnet_PersonalizationAllUsers.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\aspnet_PersonalizationPerUser.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\aspnet_Profile.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\aspnet_Roles.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\aspnet_SchemaVersions.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\aspnet_Users.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\aspnet_WebEvent_Events.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Coordinator.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Cost.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\CostDistribution.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\CostGroup.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\CostType.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Creditor.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DataService.cs" />
+    <Compile Include="DAL\Delay.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DelayReason.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Distance.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DonationPathway.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Donor.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Font.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Hospital.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Incident.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\IncidentAlert.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\IncidentAnalysis.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\IncidentCategory.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\IncidentDamageCategory.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\IncidentDocument.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\IncidentDonorRelatedDelay.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\IncidentDonorRelatedOrgan.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\IncidentDonorRelatedTransport.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\IncidentLexicon.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\IncidentLexiconDocument.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\IncidentLikelihoodToRepeat.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\IncidentMail.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\IncidentPotentialDamage.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\IncidentProcess.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\IncidentProcessToCategory.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\IncidentState.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\IncidentTask.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\ItemGroup.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Language.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Lifeport.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\OperationCenter.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Organ.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\OrganCost.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\OrganCostAdds.cs" />
+    <Compile Include="DAL\OrganCostDistribution.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Organization.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\OrganToTransportItemAssociation.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\PasswordResetToken.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\ReminderLetter.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\SLIDS.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SLIDS.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\SLIDS.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\SLIDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SLIDS.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\SLIDS1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\StatsDonor.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\StatsOrgans.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\StatsTransports.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\TransplantOrgan.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\TransplantStatus.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Transport.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\TransportedOrgan.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\TransportItem.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Vehicle.cs">
+      <DependentUpon>SLIDS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Delay.aspx.cs">
+      <DependentUpon>Delay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Delay.aspx.designer.cs">
+      <DependentUpon>Delay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helper.cs" />
+    <Compile Include="IncidentLexicon.aspx.cs">
+      <DependentUpon>IncidentLexicon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IncidentLexicon.aspx.designer.cs">
+      <DependentUpon>IncidentLexicon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IncidentCreate.aspx.cs">
+      <DependentUpon>IncidentCreate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IncidentCreate.aspx.designer.cs">
+      <DependentUpon>IncidentCreate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IncidentOverview.aspx.cs">
+      <DependentUpon>IncidentOverview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IncidentOverview.aspx.designer.cs">
+      <DependentUpon>IncidentOverview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interruption.aspx.cs">
+      <DependentUpon>Interruption.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interruption.aspx.designer.cs">
+      <DependentUpon>Interruption.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MailSend.aspx.cs">
+      <DependentUpon>MailSend.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MailSend.aspx.designer.cs">
+      <DependentUpon>MailSend.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organ.aspx.cs">
+      <DependentUpon>Organ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organ.aspx.designer.cs">
+      <DependentUpon>Organ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DAL\Common.cs" />
+    <Compile Include="Reports\DAL\FilterData.cs" />
+    <Compile Include="Reports\DAL\Transport.cs" />
+    <Compile Include="Reports\DAL\TransportCost.cs" />
+    <Compile Include="Reports\FinancialReport.aspx.cs">
+      <DependentUpon>FinancialReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialReport.aspx.designer.cs">
+      <DependentUpon>FinancialReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DAL\Procurement.cs" />
+    <Compile Include="Reports\IncidentReportViewPDF.aspx.cs">
+      <DependentUpon>IncidentReportViewPDF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\IncidentReportViewPDF.aspx.designer.cs">
+      <DependentUpon>IncidentReportViewPDF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ReminderLetterViewPDF.aspx.cs">
+      <DependentUpon>ReminderLetterViewPDF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\ReminderLetterViewPDF.aspx.designer.cs">
+      <DependentUpon>ReminderLetterViewPDF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ReportBasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\StatisticalReport.aspx.cs">
+      <DependentUpon>StatisticalReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\StatisticalReport.aspx.designer.cs">
+      <DependentUpon>StatisticalReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FinancialReportViewPDF.aspx.cs">
+      <DependentUpon>FinancialReportViewPDF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialReportViewPDF.aspx.designer.cs">
+      <DependentUpon>FinancialReportViewPDF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DAL\StatisticNumbers.cs" />
+    <Compile Include="IncitentStatistics.aspx.cs">
+      <DependentUpon>IncitentStatistics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IncitentStatistics.aspx.designer.cs">
+      <DependentUpon>IncitentStatistics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Statistics.aspx.cs">
+      <DependentUpon>Statistics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Statistics.aspx.designer.cs">
+      <DependentUpon>Statistics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Transport.aspx.cs">
+      <DependentUpon>Transport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Transport.aspx.designer.cs">
+      <DependentUpon>Transport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TransportCost.aspx.cs">
+      <DependentUpon>TransportCost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TransportCost.aspx.designer.cs">
+      <DependentUpon>TransportCost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewDocument.aspx.cs">
+      <DependentUpon>ViewDocument.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewDocument.aspx.designer.cs">
+      <DependentUpon>ViewDocument.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPDF.aspx.cs">
+      <DependentUpon>ViewPDF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewPDF.aspx.designer.cs">
+      <DependentUpon>ViewPDF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WarmUp.aspx.cs">
+      <DependentUpon>WarmUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WarmUp.aspx.designer.cs">
+      <DependentUpon>WarmUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebAccess\Authenticate.aspx.cs">
+      <DependentUpon>Authenticate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebAccess\Authenticate.aspx.designer.cs">
+      <DependentUpon>Authenticate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebAccess\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebAccess\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebAccess\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebAccess\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\ManageUserAndRoleAllocation.aspx.cs">
+      <DependentUpon>ManageUserAndRoleAllocation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\ManageUserAndRoleAllocation.aspx.designer.cs">
+      <DependentUpon>ManageUserAndRoleAllocation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebAccess\PasswordRecovery.aspx.cs">
+      <DependentUpon>PasswordRecovery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebAccess\PasswordRecovery.aspx.designer.cs">
+      <DependentUpon>PasswordRecovery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebAccess\PasswordResetWithToken.aspx.cs">
+      <DependentUpon>PasswordResetWithToken.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebAccess\PasswordResetWithToken.aspx.designer.cs">
+      <DependentUpon>PasswordResetWithToken.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebAccess\UnauthorisedAccess.aspx.cs">
+      <DependentUpon>UnauthorisedAccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebAccess\UnauthorisedAccess.aspx.designer.cs">
+      <DependentUpon>UnauthorisedAccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SLIDS.Master.cs">
+      <DependentUpon>SLIDS.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SLIDS.Master.designer.cs">
+      <DependentUpon>SLIDS.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SLIDS.Master" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Administration\Web.config" />
+    <EntityDeploy Include="DAL\SLIDS.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SLIDS.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="DAL\SLIDS.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SLIDS.edmx</DependentUpon>
+      <LastGenOutput>SLIDS.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DAL\SLIDS.edmx.diagram">
+      <DependentUpon>SLIDS.edmx</DependentUpon>
+    </Content>
+    <Content Include="DAL\SLIDS.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SLIDS.edmx</DependentUpon>
+      <LastGenOutput>SLIDS1.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_Offline.htm.bak" />
+    <Content Include="libman.json" />
+    <None Include="Properties\PublishProfiles\Deployment.pubxml" />
+    <Content Include="resources\Transportform.pdf" />
+    <Content Include="resources\tahoma.ttf" />
+    <Content Include="resources\TransportForm20160829.pdf" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Reports\StatisticalReport.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PdfCreator\PdfCreator.csproj">
+      <Project>{739df349-b64b-459e-b7ab-4f7fec2558b4}</Project>
+      <Name>PdfCreator</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

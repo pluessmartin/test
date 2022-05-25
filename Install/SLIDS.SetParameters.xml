@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <setParameter name="IIS Web Application Name" value="SLIDSWeb/SLIDS" />
+  <setParameter name="SLIDS-Web.config Connection String" value="Data Source=XANDA\SQLServerTest;Initial Catalog=SLIDS;Integrated Security=False;Persist Security Info=True;User ID=SLIDS_User;Password=Cantaloop01;Encrypt=False;MultipleActiveResultSets=True" />
+  <setParameter name="Entities-Web.config Connection String" value="metadata=res://*/DAL.SLIDS.csdl|res://*/DAL.SLIDS.ssdl|res://*/DAL.SLIDS.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=XAMAR\SQLSERVERTEST;initial catalog=SLIDS;integrated security=False;persist security info=True;user id=SLIDS_User;password=Cantaloop01;multipleactiveresultsets=True;encrypt=False;App=EntityFramework&quot;" />
+</parameters>

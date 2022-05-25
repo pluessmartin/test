@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c8d3c459ab3b4e48a4cca1e06315447a" Name="Diagram1" ZoomLevel="71">
+        <EntityTypeShape EntityType="SLIDS.Address" Width="1.5" PointX="0.75" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="SLIDS.Coordinator" Width="1.5" PointX="3" PointY="17.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SLIDS.Cost" Width="1.5" PointX="13.5" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SLIDS.CostDistribution" Width="1.5" PointX="24.75" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SLIDS.CostGroup" Width="1.5" PointX="9" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="SLIDS.CostType" Width="1.5" PointX="11.25" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SLIDS.Creditor" Width="1.5" PointX="11.25" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SLIDS.Delay" Width="1.5" PointX="24" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SLIDS.DelayReason" Width="1.5" PointX="21.75" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SLIDS.Distance" Width="1.5" PointX="8.25" PointY="18" IsExpanded="true" />
+        <EntityTypeShape EntityType="SLIDS.Donor" Width="1.5" PointX="11.25" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SLIDS.Font" Width="1.5" PointX="3.75" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SLIDS.Hospital" Width="1.5" PointX="6" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="SLIDS.Incident" Width="1.5" PointX="16.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SLIDS.IncidentAlert" Width="1.5" PointX="0.75" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SLIDS.IncidentCategory" Width="1.5" PointX="13.875" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SLIDS.IncidentDamageCategory" Width="1.5" PointX="14.25" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SLIDS.IncidentLexicon" Width="1.5" PointX="0.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SLIDS.IncidentLexiconDocument" Width="1.5" PointX="3" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SLIDS.IncidentLikelihoodToRepeat" Width="1.5" PointX="14.25" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SLIDS.IncidentPotentialDamage" Width="1.5" PointX="14.25" PointY="27" IsExpanded="true" />
+        <EntityTypeShape EntityType="SLIDS.IncidentProcess" Width="1.5" PointX="14.25" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SLIDS.IncidentState" Width="1.5" PointX="14.25" PointY="32.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SLIDS.IncidentTask" Width="1.5" PointX="5.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SLIDS.ItemGroup" Width="1.5" PointX="12" PointY="23.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SLIDS.Language" Width="1.5" PointX="3.75" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SLIDS.OperationCenter" Width="1.5" PointX="19.5" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SLIDS.Organ" Width="1.5" PointX="14.25" PointY="23.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SLIDS.OrganCost" Width="1.5" PointX="18.75" PointY="17.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SLIDS.OrganCostDistribution" Width="1.5" PointX="29" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SLIDS.Organization" Width="1.5" PointX="9" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="SLIDS.OrganToTransportItemAssociation" Width="1.5" PointX="26.25" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SLIDS.ReminderLetter" Width="1.5" PointX="6" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SLIDS.TransplantOrgan" Width="1.5" PointX="16.5" PointY="16.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SLIDS.TransplantStatus" Width="1.5" PointX="14.25" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="SLIDS.TransportItem" Width="1.5" PointX="24" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SLIDS.Vehicle" Width="1.5" PointX="19.5" PointY="21.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SLIDS.SLIDS" Width="1.5" PointX="5.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SLIDS.StatsDonor" Width="1.5" PointX="7.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SLIDS.StatsOrgans" Width="1.5" PointX="9.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SLIDS.StatsTransports" Width="1.5" PointX="0.75" PointY="22.5" IsExpanded="true" />
+        <AssociationConnector Association="SLIDS.FK_Coordinator_Address" ManuallyRouted="false" />
+        <AssociationConnector Association="SLIDS.FK_Hospital_AccountingAddress" ManuallyRouted="false" />
+        <AssociationConnector Association="SLIDS.FK_Hospital_Address" ManuallyRouted="false" />
+        <AssociationConnector Association="SLIDS.FK_Coordinator_Hospital" ManuallyRouted="false" />
+        <AssociationConnector Association="SLIDS.FK_Donor_NC" ManuallyRouted="false" />
+        <AssociationConnector Association="SLIDS.FK_Donor_TC" ManuallyRouted="false" />
+        <AssociationConnector Association="SLIDS.FK_TransplantOrgan_TC" ManuallyRouted="false" />
+        <AssociationConnector Association="SLIDS.FK_Cost_CostType" ManuallyRouted="false" />
+        <AssociationConnector Association="SLIDS.FK_Cost_Creditor" ManuallyRouted="false" />
+        <AssociationConnector Association="SLIDS.FK_Cost_Donor" ManuallyRouted="false" />
+        <AssociationConnector Association="SLIDS.FK_Cost_Kreditor" ManuallyRouted="false" />
+        <AssociationConnector Association="SLIDS.FK_OrganCost_Cost" ManuallyRouted="false" />
+        <AssociationConnector Association="SLIDS.FK_CostDistribution_CostType" ManuallyRouted="false" />
+        <AssociationConnector Association="SLIDS.FK_CostDistribution_Vehicle" ManuallyRouted="false" />
+        <AssociationConnector Association="SLIDS.FK_OrganCostDistribution_CostDistribution" ManuallyRouted="false" />
+        <AssociationConnector Association="SLIDS.FK_CostType_CostGroup" ManuallyRouted="false" />
+        <AssociationConnector Association="SLIDS.FK_Delay_DelayReason" ManuallyRouted="false" />
+        <AssociationConnector Association="SLIDS.FK_Distance_Hospital1" ManuallyRouted="false" />
+        <AssociationConnector Association="SLIDS.FK_Distance_Hospital2" ManuallyRouted="false" />
+        <AssociationConnector Association="SLIDS.FK_Donor_DetectionHospital" ManuallyRouted="false" />
+        <AssociationConnector Association="SLIDS.FK_Donor_Organization" ManuallyRouted="false" />
+        <AssociationConnector Association="SLIDS.FK_Donor_ProcurementHospital" ManuallyRouted="false" />
+        <AssociationConnector Association="SLIDS.FK_Donor_ReferralHospital" ManuallyRouted="false" />
+        <AssociationConnector Association="SLIDS.FK_TransplantOrgan_Donor" ManuallyRouted="false" />
+        <AssociationConnector Association="SLIDS.FK_ReminderLetter_Font" ManuallyRouted="false" />
+        <AssociationConnector Association="SLIDS.FK_Hospital_Language" ManuallyRouted="false" />
+        <AssociationConnector Association="SLIDS.FK_TransplantOrgan_ProcurementTeam" ManuallyRouted="false" />
+        <AssociationConnector Association="SLIDS.FK_TransplantOrgan_TransplantCenter" ManuallyRouted="false" />
+        <AssociationConnector Association="SLIDS.FK_Incident_Incident" ManuallyRouted="false" />
+        <AssociationConnector Association="SLIDS.FK_Incident_IncidentCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="SLIDS.FK_Incident_IncidentDamageCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="SLIDS.FK_Incident_IncidentLikelihoodToRepeat" ManuallyRouted="false" />
+        <AssociationConnector Association="SLIDS.FK_Incident_IncidentPotentialDamage" ManuallyRouted="false" />
+        <AssociationConnector Association="SLIDS.FK_Incident_IncidentProcess" ManuallyRouted="false" />
+        <AssociationConnector Association="SLIDS.FK_Incident_IncidentState" ManuallyRouted="false" />
+        <AssociationConnector Association="SLIDS.FK_IncidentLexiconDocument_IncidentLexicon" ManuallyRouted="false" />
+        <AssociationConnector Association="SLIDS.FK_Organ_ItemGroup" ManuallyRouted="false" />
+        <AssociationConnector Association="SLIDS.FK_TransportItem_ItemGroup" ManuallyRouted="false" />
+        <AssociationConnector Association="SLIDS.FK_ReminderLetter_Language" ManuallyRouted="false" />
+        <AssociationConnector Association="SLIDS.FK_OrganCostDistribution_Organ" ManuallyRouted="false" />
+        <AssociationConnector Association="SLIDS.FK_OrganToTransportItemAssociation_Organ" ManuallyRouted="false" />
+        <AssociationConnector Association="SLIDS.FK_TransplantOrgan_Organ" ManuallyRouted="false" />
+        <AssociationConnector Association="SLIDS.FK_OrganCost_TransplantOrgan" ManuallyRouted="false" />
+        <AssociationConnector Association="SLIDS.FK_TransplantOrgan_Organization" ManuallyRouted="false" />
+        <AssociationConnector Association="SLIDS.FK_OrganToTransportItemAssociation_TransportItem" ManuallyRouted="false" />
+        <AssociationConnector Association="SLIDS.FK_TransplantOrgan_TransplantStatus" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="SLIDS.aspnet_Membership" Width="1.5" PointX="21.625" PointY="1.375" />
+        <EntityTypeShape EntityType="SLIDS.aspnet_Users" Width="1.5" PointX="19.375" PointY="2.625" />
+        <AssociationConnector Association="SLIDS.FK__aspnet_Me__UserI__47A6A41B" />
+        <AssociationConnector Association="SLIDS.FK_IncidentAlert_Incident" />
+        <AssociationConnector Association="SLIDS.FK_IncidentTask_Incident" />
+        <AssociationConnector Association="SLIDS.IncidentAlertHospital" />
+        <EntityTypeShape EntityType="SLIDS.aspnet_Roles" Width="1.5" PointX="17.125" PointY="11.875" />
+        <AssociationConnector Association="SLIDS.aspnet_UsersInRoles" />
+        <EntityTypeShape EntityType="SLIDS.IncidentMail" Width="1.5" PointX="16.5" PointY="32.5" />
+        <AssociationConnector Association="SLIDS.FK_IncidentMail_IncidentState" />
+        <EntityTypeShape EntityType="SLIDS.aspnet_Applications" Width="1.5" PointX="12.25" PointY="1.5" />
+        <EntityTypeShape EntityType="SLIDS.aspnet_Paths" Width="1.5" PointX="14.5" PointY="35.625" />
+        <EntityTypeShape EntityType="SLIDS.aspnet_PersonalizationAllUsers" Width="1.5" PointX="16.75" PointY="39" />
+        <EntityTypeShape EntityType="SLIDS.aspnet_PersonalizationPerUser" Width="1.5" PointX="22" PointY="24.125" />
+        <EntityTypeShape EntityType="SLIDS.aspnet_Profile" Width="1.5" PointX="22" PointY="8.25" />
+        <EntityTypeShape EntityType="SLIDS.aspnet_SchemaVersions" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SLIDS.aspnet_WebEvent_Events" Width="1.5" PointX="2.75" PointY="0.75" />
+        <AssociationConnector Association="SLIDS.FK__aspnet_Me__Appli__46B27FE2" />
+        <AssociationConnector Association="SLIDS.FK__aspnet_Pa__Appli__489AC854" />
+        <AssociationConnector Association="SLIDS.FK__aspnet_Ro__Appli__4D5F7D71" />
+        <AssociationConnector Association="SLIDS.FK__aspnet_Us__Appli__4E53A1AA" />
+        <AssociationConnector Association="SLIDS.FK__aspnet_Pe__PathI__498EEC8D" />
+        <AssociationConnector Association="SLIDS.FK__aspnet_Pe__PathI__4A8310C6" />
+        <AssociationConnector Association="SLIDS.FK__aspnet_Pe__UserI__4B7734FF" />
+        <AssociationConnector Association="SLIDS.FK__aspnet_Pr__UserI__4C6B5938" />
+        <EntityTypeShape EntityType="SLIDS.IncidentDocument" Width="1.5" PointX="18.75" PointY="7.25" />
+        <AssociationConnector Association="SLIDS.FK_IncidentDocument_Incident" />
+        <EntityTypeShape EntityType="SLIDS.IncidentDonorRelatedDelay" Width="1.5" PointX="27.25" PointY="7.75" />
+        <EntityTypeShape EntityType="SLIDS.IncidentDonorRelatedOrgan" Width="1.5" PointX="24.75" PointY="5.5" />
+        <EntityTypeShape EntityType="SLIDS.IncidentDonorRelatedTransport" Width="1.5" PointX="27" PointY="10.625" />
+        <AssociationConnector Association="SLIDS.FK_IncidentDonorRelatedDelay_Delay" />
+        <AssociationConnector Association="SLIDS.FK_IncidentDonorRelatedDelay_Incident" />
+        <AssociationConnector Association="SLIDS.FK_IncidentDonorRelatedOrgan_Incident" />
+        <AssociationConnector Association="SLIDS.FK_IncidentDonorRelatedTransport_Incident" />
+        <AssociationConnector Association="SLIDS.FK_IncidentDonorRelatedOrgan_TransplantOrgan" />
+        <EntityTypeShape EntityType="SLIDS.IncidentProcessToCategory" Width="1.5" PointX="16.5" PointY="22.875" />
+        <AssociationConnector Association="SLIDS.FK_IncidentProcessToCategory_IncidentCategory" />
+        <AssociationConnector Association="SLIDS.FK_IncidentProcessToCategory_IncidentProcess" />
+        <EntityTypeShape EntityType="SLIDS.IncidentAnalysis" Width="1.5" PointX="18.75" PointY="0.75" />
+        <AssociationConnector Association="SLIDS.FK_IncidentAnalysis_Incident" />
+        <EntityTypeShape EntityType="SLIDS.Lifeport" Width="1.5" PointX="24.75" PointY="22.25" />
+        <EntityTypeShape EntityType="SLIDS.Transport" Width="1.5" PointX="21.75" PointY="14.875" />
+        <EntityTypeShape EntityType="SLIDS.TransportedOrgan" Width="1.5" PointX="27" PointY="21.5" />
+        <AssociationConnector Association="SLIDS.FK_Cost_Transport" />
+        <AssociationConnector Association="SLIDS.FK_Delay_Transport" />
+        <AssociationConnector Association="SLIDS.FK_Transport_Donor" />
+        <AssociationConnector Association="SLIDS.FK_Transport_Departure" />
+        <AssociationConnector Association="SLIDS.FK_Transport_Destination" />
+        <AssociationConnector Association="SLIDS.FK_IncidentDonorRelatedTransport_Transport" />
+        <AssociationConnector Association="SLIDS.FK_TransportedOrgan_Lifeport" />
+        <AssociationConnector Association="SLIDS.FK_Transport_OperationCenter" />
+        <AssociationConnector Association="SLIDS.FK_TransportedOrgan_TransplantOrgan" />
+        <AssociationConnector Association="SLIDS.FK_Transport_Vehicle" />
+        <AssociationConnector Association="SLIDS.FK_TransportedOrgan_Transport" />
+        <AssociationConnector Association="SLIDS.RelatedTransport" />
+        <AssociationConnector Association="SLIDS.TransportedItem" />
+        <EntityTypeShape EntityType="SLIDS.DonationPathway" Width="1.5" PointX="5.375" PointY="1.125" />
+        <AssociationConnector Association="SLIDS.FK_Donor_DonationPathway" />
+        <EntityTypeShape EntityType="SLIDS.PasswordResetToken" Width="1.5" PointX="7.375" PointY="0.75" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
